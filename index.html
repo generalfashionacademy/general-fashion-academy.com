@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>General Fashion Academy</title>
+    <meta name="description" content="General Fashion Academy - Premier Dressmaking and Fashion Design in Kumasi">
+    <link rel="stylesheet" href="style.css?v=2">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- External Libraries for Export -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+
+<body>
+    <div class="glow-background">
+        <div class="glow-circle"></div>
+        <div class="glow-circle"></div>
+        <div class="glow-circle"></div>
+    </div>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="logo.PNG" alt="GFA Logo" class="nav-logo">
+                <span class="logo-text">General Fashion Academy</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-item active" data-target="home-section">Home</a></li>
+                <li><a href="#about" class="nav-item" data-target="about-section">About</a></li>
+                <li><a href="#courses" class="nav-item" data-target="courses-section">Courses</a></li>
+                <li><a href="#admissions" class="nav-item" data-target="admissions-section">Admissions</a></li>
+                <li><a href="#gallery" class="nav-item" data-target="gallery-section">Gallery</a></li>
+            </ul>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <!-- Home Section -->
+        <section id="home-section" class="page-section active">
+            <div class="hero">
+                <div class="hero-content">
+                    <h1 class="hero-title">General Fashion Academy</h1>
+                    <p class="hero-subtitle">Shaping the Future of Fashion since 1994</p>
+                    <button class="cta-button primary-btn" onclick="navigateTo('admissions-section')">Enroll
+                        Now</button>
+                </div>
+            </div>
+
+            <!-- Welcome Message -->
+            <div class="container">
+                <div class="welcome-container glass-card">
+                    <div class="welcome-badge">Akwaaba!</div>
+                    <h2>Welcome to Our Community</h2>
+                    <p class="welcome-text">
+                        We are delighted to have you here! Whether you are a prospective student looking to start your
+                        creative journey or a returning member of our community, we welcome you with open arms. At GFA,
+                        we don't just teach fashion; we cultivate talent and shape the future of African design. Explore
+                        our courses, view our gallery, and join a tradition of excellence that spans over three decades.
+                    </p>
+                    <div class="welcome-footer">
+                        <span> Management, GFA</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about-section" class="page-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Our History</h2>
+                    <div class="divider"></div>
+                </div>
+                <div class="about-content glass-card">
+                    <p>Founded in the early 1990s by <strong>Mr.Osei Asibey Bonsu</strong>  in Kwadaso, Kumasi, General Fashion Academy (GFA) was established to bridge the gap between traditional informal apprenticeship and structured, professional fashion education in the Ashanti Region. Beginning as a specialized tailoring enterprise recognized for high-precision church vestments—such as cassocks, albs, clerical shirts, chasubles, and choir robes alongside custom ladies’ and gentlemen’s wear, the academy built an early reputation for technical precision. As Kumasi grew into a vibrant fashion hub, GFA expanded into a full-scale educational institute to equip aspiring designers with pattern drafting, freehand cutting, garment assembly, and fashion entrepreneurship skills. Over the past three decades, GFA has evolved into a premier incubator for dressmakers and tailors by combining intensive 98% practical workshop training with modernized digital administration systems, allowing students across Ghana to easily access admissions, manage coursework, and master both traditional Ghanaian garment construction and contemporary fashion design.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Courses Section -->
+        <section id="courses-section" class="page-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Our Curriculum</h2>
+                    <div class="divider"></div>
+                </div>
+                <div class="courses-grid">
+                    <div class="course-card glass-card">
+                        <h3><i class="fas fa-book-open"></i> General Courses</h3>
+                        <ul>
+                            <li>Branding</li>
+                            <li>Leadership</li>
+                            <li>Marketing</li>
+                            <li>Entrepreneurship</li>
+                        </ul>
+                    </div>
+                    <div class="course-card glass-card">
+                        <h3><i class="fas fa-cut"></i> Year One Focus</h3>
+                        <ul>
+                            <li>Garment Construction & Design</li>
+                            <li>Dress Making ( up to Wedding Gown)</li>
+                            <li>Millinery</li>
+                            <li>Modeling</li>
+                        </ul>
+                    </div>
+                    <div class="course-card glass-card">
+                        <h3><i class="fas fa-crown"></i> Year Two Masterclass</h3>
+                            <li>Suit Making</li>
+                            <li>Boning</li>
+                            <li>Tailoring (Men's Wear)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Admissions Section -->
+        <section id="admissions-section" class="page-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Admissions</h2>
+                    <div class="divider"></div>
+                </div>
+
+                <div class="admissions-container">
+                    <!-- Row 1: Admission Process (Image Left) -->
+                    <div class="admission-row">
+                        <div class="admission-image-col">
+                            <img src="IMG-20260429-WA0030.jpg" alt="Admission Process"
+                                class="admission-row-img">
+                        </div>
+                        <div class="admission-content-col">
+                            <div class="admission-intro glass-card">
+                                <h3>Admission Process</h3>
+                                <p>We appreciate your interest in our institution. We are excited to introduce you to
+                                    the general fashion academy community, and our website is a terrific location to
+                                    learn more about everything we have to offer.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Row 2: Cost & Payments (Image Right) -->
+                    <div class="admission-row reverse">
+                        <div class="admission-image-col">
+                            <img src="IMG-20260429-WA0042.jpg" alt="Cost & Payments"
+                                class="admission-row-img">
+                        </div>
+                        <div class="admission-content-col">
+                            <div class="fees-table-container glass-card">
+                                <h4>HOW TO GET YOUR FORMS:</h4>
+
+                                <ol>
+                                    <li>Call on 0244264872 to purchase form or come to our front desk of the school to purchase your forms.</li>
+                                    <li>Pay through Via Momo <strong>024 426 4872</strong> (General Fashion Academy).
+                                        Send a screenshot to 024 426 4872 of Momo transaction.</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Row 3: Important Notice (Image Left) -->
+                    <div class="admission-row">
+                        <div class="admission-image-col">
+                            <img src="IMG-20260429-WA0090.jpg" alt="Important Notice"
+                                class="admission-row-img">
+                        </div>
+                        <div class="admission-content-col">
+                            <div class="important-notice glass-card alert-box">
+                                <h3><i class="fas fa-exclamation-circle"></i> Important Notice</h3>
+                                <p><strong>(USE THE
+                                        SERIAL NUMBER AND PIN TO FILL THE FORM ON
+                                        generalfashionacademyonlineforms.online)</strong></p>
+                                <ul class="notice-list">
+                                    <li>Tuition fee shall be paid every year.</li>
+                                    <li>Fees paid are not refundable.</li>
+                                    <li>Tuition, miscellaneous & maintenance fees must be paid at the office or through
+                                        momo or at the bank.</li>
+                                    <li>Miscellaneous covers school uniform and student ID card.</li>
+                                    <li>You can pay 70% of the tuition (or full amount).</li>
+                                </ul>
+                                <div class="text-center mt-4">
+                                    <a href="https://www.generalfashionacademyonlineforms.online/" target="_blank"
+                                        class="blue-btn">Fill Form</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery-section" class="page-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Gallery</h2>
+                    <div class="divider"></div>
+                </div>
+                <div class="gallery-grid" id="gallery-container">
+                    <!-- Images will be loaded dynamically via JS -->
+                </div>
+            </div>
+        </section>
+        <!-- Main Footer -->
+        <footer id="main-footer" class="site-footer">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-brand">
+                        <img src="logo.PNG" alt="GFA Logo" class="footer-logo">
+                        <div class="footer-title">General Fashion Academy</div>
+                        <p>Empowering the next generation of fashion designers with excellence in education since 1994.
+                        </p>
+                    </div>
+                    <div class="footer-links">
+                        <h4>Navigation</h4>
+                        <ul>
+                            <li><a href="#" onclick="navigateTo('home-section')">Home</a></li>
+                            <li><a href="#" onclick="navigateTo('about-section')">History</a></li>
+                            <li><a href="#" onclick="navigateTo('admissions-section')">Admissions</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-contact">
+                        <h4>Contact info</h4>
+                        <p><i class="fas fa-envelope"></i> generalfashionacademyaccra@gmail.com</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Kumasi Metropolis, Ghana</p>
+                        <p><i class="fas fa-phone"></i> +233 (0) 244 264 872</p>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2026 General Fashion Academy. All Rights Reserved. | <a href="#"
+                            onclick="openModal('classrep-modal')"
+                            style="color:var(--accent-gold); text-decoration:none;">Class Rep Portal</a></p>
+                </div>
+            </div>
+        </footer>
+
+
+        <!-- Class Rep Portal Section -->
+        <section id="classrep-section" class="page-section portal-section">
+            <div class="portal-sidebar">
+                <div class="portal-brand">
+                    <img src="logo.PNG" alt="Logo" class="sidebar-logo">
+                    <span>Class Rep</span>
+                </div>
+                <div class="student-profile-mini">
+                    <i class="fas fa-users"></i>
+                    <span id="classrep-portal-name">Level X Rep</span>
+                </div>
+                <div id="classrep-current-date"
+                    style="text-align: center; font-size: 0.9rem; color: #fff; margin-bottom: 20px; font-weight: 600; opacity: 0.9;">
+                    <i class="fas fa-calendar-day" style="margin-right: 5px;"></i> <span
+                        id="cr-date-display">--/--/----</span>
+                </div>
+                <ul class="portal-nav">
+                    <li class="active" data-classrep-tab="dashboard"><i class="fas fa-clipboard-list"></i> Register</li>
+                    <li data-classrep-tab="drafts"><i class="fas fa-edit"></i> Drafts & Progress</li>
+                    <li data-classrep-tab="history"><i class="fas fa-history"></i> Attendance Logs</li>
+                    <li data-classrep-tab="info"><i class="fas fa-info-circle"></i> Information Hub</li>
+                    <li data-classrep-tab="to-admin"><i class="fas fa-envelope"></i> Information to Admin</li>
+                    <li onclick="logout()"><i class="fas fa-sign-out-alt"></i> Logout</li>
+                </ul>
+            </div>
+            <div class="portal-content">
+                <!-- Dashboard Tab -->
+                <div id="classrep-dashboard-tab" class="classrep-tab-content active">
+                    <div class="student-welcome-banner glass-card"
+                        style="background: linear-gradient(135deg, #1A3C5E 0%, #0A2540 100%);">
+                        <div class="welcome-text">
+                            <h2>Class Register</h2>
+                            <p>Mark attendance and manage your level's records.</p>
+                        </div>
+                        <div class="welcome-status-badge">
+                            <i class="fas fa-users-cog"></i> Class Representative
+                        </div>
+                    </div>
+
+                    <div class="flex-between mb-4 mt-4">
+                        <div>
+                            <p class="text-muted">Currently marking students for Level <span
+                                    id="cr-level-badge">X</span>. <span id="register-status-badge"
+                                    class="status-pill warning"
+                                    style="background:#3498db; color:white; display:none;">Draft Active</span></p>
+                        </div>
+                        <div style="display: flex; gap: 10px; align-items: center;">
+                            <button id="btn-save-progress" class="primary-btn small-btn" onclick="saveProgress()"
+                                style="background:#3498db; color:white; border:none; padding:8px 15px; border-radius:30px; cursor:pointer; font-weight:600;"><i
+                                    class="fas fa-save"></i> Save Progress</button>
+                            <button id="btn-save-attendance" class="primary-btn small-btn" onclick="saveDayAttendance()"
+                                style="background:#28a745; color:white; border:none; padding:8px 15px; border-radius:30px; cursor:pointer; font-weight:600;"><i
+                                    class="fas fa-check-double"></i> Final Submission</button>
+                            <button class="admin-btn small-btn" onclick="resetClassAttendance()"
+                                style="background:#dc3545; color:white; border:none; padding:8px 15px; border-radius:30px; cursor:pointer; font-weight:600;"><i
+                                    class="fas fa-trash-alt"></i> Reset Register</button>
+                        </div>
+                    </div>
+
+                    <div class="table-responsive glass-card">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Student Number</th>
+                                    <th>Name</th>
+                                    <th>Level</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody id="classrep-students-list">
+                                <!-- Populated dynamically -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Drafts Tab -->
+                <div id="classrep-drafts-tab" class="classrep-tab-content">
+                    <h2>Drafts & In-Progress Registers</h2>
+                    <p class="text-muted mb-4">You can resume these registers to finish marking and submit them
+                        completely.</p>
+
+                    <div id="classrep-drafts-list" class="courses-curriculum-grid">
+                        <!-- Populated with draft sessions -->
+                        <p class="text-muted">No active drafts found.</p>
+                    </div>
+                </div>
+
+                <!-- History Tab -->
+                <div id="classrep-history-tab" class="classrep-tab-content">
+                    <div id="history-list-view">
+                        <h2>Attendance Logs</h2>
+                        <p class="text-muted mb-4">Select a session below to view details.</p>
+
+                        <div id="history-sessions-grid" class="courses-curriculum-grid">
+                            <!-- Populated with cards for each saved date -->
+                            <p class="text-muted">Loading logs...</p>
+                        </div>
+                    </div>
+
+                    <div id="history-detail-view" style="display: none;">
+                        <div class="flex-between mb-4">
+                            <div>
+                                <h2 id="snapshot-title">Session Details</h2>
+                                <p id="snapshot-meta" class="text-muted"></p>
+                            </div>
+                            <button class="small-btn" onclick="showHistoryList()"
+                                style="background:#6c757d; color:white; border:none; padding:8px 15px; border-radius:30px; cursor:pointer;"><i
+                                    class="fas fa-arrow-left"></i> Back to Logs</button>
+                        </div>
+
+                        <div class="table-responsive glass-card">
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>Student ID</th>
+                                        <th>Name</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="classrep-history-detail-list">
+                                    <!-- Populated on click -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Info Tab -->
+                <div id="classrep-info-tab" class="classrep-tab-content">
+                    <h2>Information Hub</h2>
+                    <p class="text-muted mb-4">Important resources, duties, and contacts for Class Representatives.</p>
+
+                    <div class="courses-grid">
+                        <div class="course-card glass-card">
+                            <h3><i class="fas fa-exclamation-triangle"></i> Class Rep Duties</h3>
+                            <ul>
+                                <li>Mark attendance daily accurately.</li>
+                                <li>Report persistent absentees to admin.</li>
+                                <li>Ensure the classroom is organized.</li>
+                                <li>Coordinate with instructors for materials.</li>
+                            </ul>
+                        </div>
+                        <div class="course-card glass-card">
+                            <h3><i class="fas fa-calendar-alt"></i> Semester Schedule</h3>
+                            <ul>
+                                <li>Orientation: Week 1</li>
+                                <li>Mid-term Exams: Week 8</li>
+                                <li>Practical Projects: Week 12</li>
+                                <li>Final Examinations: Week 15</li>
+                            </ul>
+                        </div>
+                        <div class="course-card glass-card">
+                            <h3><i class="fas fa-phone-alt"></i> Emergency Contacts</h3>
+                            <ul>
+                                <li>Admin Office: 024 426 4872</li>
+                                <li>HQ Desk: generalfashionacademyaccra@gmail.com</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Information to Admin Tab -->
+                <div id="classrep-to-admin-tab" class="classrep-tab-content">
+                    <h2>Information to Admin</h2>
+                    <p class="text-muted mb-4">Send reports, attendance summaries, or requests directly to the
+                        administration.</p>
+
+                    <div class="glass-card mb-4" style="padding: 2rem;">
+                        <form id="form-classrep-to-admin">
+                            <div class="form-group">
+                                <label>Subject</label>
+                                <input type="text" id="cr-admin-subject" required
+                                    placeholder="e.g. Weekly Attendance Report, Supply Request">
+                            </div>
+                            <div class="form-group">
+                                <label>Message / Information</label>
+                                <textarea id="cr-admin-message" required rows="6"
+                                    style="width:100%; border-radius:8px; padding:12px; border:1px solid #ddd; font-family: inherit; font-size: 1rem;"
+                                    placeholder="Type your detailed information here..."></textarea>
+                            </div>
+                            <button type="submit" class="cta-button primary-btn" style="width: 100%;">
+                                <i class="fas fa-paper-plane"></i> Send Information to Admin
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modals -->
+
+    <!-- Redundant Announcement Modal Removed - Forms are now directly in the tab -->
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox-modal" class="modal lightbox-overlay" onclick="closeModal('lightbox-modal')">
+        <span class="close-lightbox">&times;</span>
+        <img id="lightbox-img" class="lightbox-content">
+    </div>
+
+    <!-- Class Rep Login Modal -->
+    <div id="classrep-modal" class="modal">
+        <div class="modal-content glass-card">
+            <span class="close-modal" onclick="closeModal('classrep-modal')">&times;</span>
+            <h2>Class Rep Login</h2>
+            <div class="classrep-boxes" style="display: flex; gap: 10px; margin-bottom: 20px;">
+                <button class="primary-btn" style="flex:1;" onclick="showClassrepLogin('100')">Level 100</button>
+                <button class="primary-btn" style="flex:1;" onclick="showClassrepLogin('200')">Level 200</button>
+            </div>
+            <div id="classrep-login-form" style="display:none;">
+                <h3 id="classrep-level-title"></h3>
+                <input type="hidden" id="classrep-level-input">
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" id="classrep-password" placeholder="Enter class rep password">
+                </div>
+                <button class="submit-btn primary-btn" onclick="loginClassrep()">Login</button>
+                <div id="classrep-error" class="error-msg"></div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Firebase SDKs (v8 Compat) -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+
+    <script src="app.js?v=2"></script>
+</body>
+
+</html>
+
